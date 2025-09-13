@@ -39,16 +39,19 @@ jobs:
         run: npm run test
 
       - name: Generate HTML report with metadata
-        run: npm run report
+        run: |
+          mkdir -p reports/extent-report-${{ matrix.env }}
+          # Pass the env-specific folder to reporter
+          npx ts-node reporter.ts --reportPath "reports/extent-report-${{ matrix.env }}"
 
       - name: Zip the report folder
-        run: zip -r extent-report.zip reports/extent-report
+        run: zip -r extent-report-${{ matrix.env }}.zip reports/extent-report-${{ matrix.env }}
 
       - name: Upload zipped report artifact
         uses: actions/upload-artifact@v4
         with:
           name: extent-report-zip-${{ matrix.env }}
-          path: extent-report.zip
+          path: extent-report-${{ matrix.env }}.zip
           retention-days: 30
 
       - name: Send zipped report via email
@@ -74,4 +77,4 @@ jobs:
 
             Regards,
             Playwright Automation Bot
-          attachments: extent-report.zip
+          attachments: extent-report-${{ matrix.env }}.zip
