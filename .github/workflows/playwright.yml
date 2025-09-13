@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: extent-report-zip
-          path: extent-report-zip
+          path: extent-report.zip
           retention-days: 30
       - name: Send zipped report via email
         uses: dawidd6/action-send-mail@v3
