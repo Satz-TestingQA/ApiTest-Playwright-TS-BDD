@@ -41,12 +41,11 @@ jobs:
       - name: Generate HTML report with metadata
         run: |
           mkdir -p reports/extent-report-${{ matrix.env }}
+          # Pass the env-specific folder to reporter
           npx ts-node reporter.ts --reportPath "reports/extent-report-${{ matrix.env }}"
 
-      - name: Zip the report folder (avoid nested dirs)
-        run: |
-          cd reports/extent-report-${{ matrix.env }}
-          zip -r ../../extent-report-${{ matrix.env }}.zip .
+      - name: Zip the report folder
+        run: zip -r extent-report-${{ matrix.env }}.zip reports/extent-report-${{ matrix.env }}
 
       - name: Upload zipped report artifact
         uses: actions/upload-artifact@v4
