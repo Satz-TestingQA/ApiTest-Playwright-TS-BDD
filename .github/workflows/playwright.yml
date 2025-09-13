@@ -4,9 +4,15 @@ on:
   schedule:
     - cron: '30 2 * * 1-5'  # MON - FRI 8:00 AM IST
   workflow_dispatch:
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        env: [prod, qa]
+    env:
+      ENV: ${{ matrix.env }}
     timeout-minutes: 60
     steps:
       - name: Checkout code
@@ -16,29 +22,35 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
       - name: Verify Node and NPM
         run: |
-              node -v
-              npm -v
-              npm config list
+          node -v
+          npm -v
+          npm config list
+
       - name: Install dependencies
         run: npm install
+
       - name: Install Playwright browsers
         run: npx playwright install
-      - name: Set environment variable
-        run: echo "ENV=prod" >> $GITHUB_ENV
+
       - name: Run Playwright tests
         run: npm run test
+
       - name: Generate HTML report with metadata
         run: npm run report
+
       - name: Zip the report folder
         run: zip -r extent-report.zip reports/extent-report
+
       - name: Upload zipped report artifact
         uses: actions/upload-artifact@v4
         with:
-          name: extent-report-zip
+          name: extent-report-zip-${{ matrix.env }}
           path: extent-report.zip
           retention-days: 30
+
       - name: Send zipped report via email
         uses: dawidd6/action-send-mail@v3
         with:
@@ -46,19 +58,20 @@ jobs:
           server_port: 587
           username: satzmails90@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "📊 Playwright Test Report - $(date +'%Y-%m-%d')"
+          subject: "📊 Playwright Test Report - ${{ matrix.env }} - $(date +'%Y-%m-%d')"
           to: satztesting1990@gmail.com
           from: satzmails90@gmail.com
           body: |
             Hello,
+
             Please find attached the zipped Playwright test report including charts, screenshots, and videos.
 
             Metadata:
             - Browser: Chromium
             - Platform: Ubuntu 20.04
-            - Environment: Production
+            - Environment: ${{ matrix.env }}
             - Execution Time: $(date +'%T')
 
             Regards,
             Playwright Automation Bot
-          attachments: playwright-report.zip
+          attachments: extent-report.zip
