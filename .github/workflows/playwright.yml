@@ -16,8 +16,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '14'
+      - name: Verify Node and NPM
+        run: |
+              node -v
+              npm -v
+              npm config list
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Install Playwright browsers
         run: npx playwright install
       - name: Set environment variable
