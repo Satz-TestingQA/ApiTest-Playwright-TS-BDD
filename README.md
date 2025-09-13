@@ -1,32 +1,8 @@
 # Playwright + Cucumber BDD Automation
 
-> **Project:** `ploaywright-qa-task1` — Playwright + Cucumber (BDD) automation with HTML reporting and CI pipeline
+> **Project:** `API Tests_Playwright_TS_BDD` — Playwright + Cucumber (BDD) automation with HTML reporting and CI pipeline
 
 ---
-
-## Table of Contents
-
-* [Introduction](#introduction)
-* [About this project & framework](#about-this-project--framework)
-* [Tools & technologies used](#tools--technologies-used)
-* [Repository structure (suggested)](#repository-structure-suggested)
-* [Prerequisites](#prerequisites)
-* [Local setup & run instructions](#local-setup--run-instructions)
-
-  * [Linux / macOS (bash)](#linux--macos-bash)
-  * [Windows (PowerShell)](#windows-powershell)
-* [CI / GitHub Actions pipeline](#ci--github-actions-pipeline)
-
-  * [What the supplied workflow does (step-by-step)](#what-the-supplied-workflow-does-step-by-step)
-* [Environment variables & secrets](#environment-variables--secrets)
-* [Report generation & artifacts](#report-generation--artifacts)
-* [Troubleshooting & common fixes](#troubleshooting--common-fixes)
-* [Recommended improvements & notes](#recommended-improvements--notes)
-* [Contributing](#contributing)
-* [License](#license)
-
----
-
 ## Introduction
 
 This repository contains an automated test framework implemented using Playwright and Cucumber (BDD) in TypeScript. Tests can be executed locally and in CI (GitHub Actions). The pipeline generates an HTML report, zips it, uploads it as an artifact and attempts to email the zipped report.
