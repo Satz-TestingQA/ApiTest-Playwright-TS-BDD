@@ -32,12 +32,12 @@ jobs:
       - name: Generate HTML report with metadata
         run: npm run report
       - name: Zip the report folder
-        run: zip -r playwright-report.zip playwright-report
+        run: zip -r extent-report.zip reports/extent-report
       - name: Upload zipped report artifact
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-zip
-          path: playwright-report.zip
+          name: extent-report-zip
+          path: extent-report-zip
           retention-days: 30
       - name: Send zipped report via email
         uses: dawidd6/action-send-mail@v3
