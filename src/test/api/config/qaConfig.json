@@ -1,0 +1,48 @@
+{
+    "apiUrl": "https://restful-booker.herokuapp.com/booking/",
+    "tokenUrl": "https://restful-booker.herokuapp.com/auth",
+    "requestBody": {
+        "firstname": "Qa Full Name",
+        "lastname": "Qa Surname",
+        "totalprice": 1000,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2025-11-01",
+            "checkout": "2025-11-05"
+        },
+        "additionalneeds": "Qa Needs"
+    },
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "tokenbody": {
+        "username": "admin",
+        "password": "password123"
+    },
+    "putHeader": {
+        "Content-Type": "application/json",
+        "Cookie": "token={0}"
+    },
+    "putRequestBody": {
+        "firstname": "Qa Put First Name",
+        "lastname": "Qa Put Surname",
+        "totalprice": 1000,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2025-11-01",
+            "checkout": "2025-11-05"
+        },
+        "additionalneeds": "Qa Update Needs"
+    },
+    "patchRequestBody": {
+        "firstname": "Qa Patch First Name",
+        "lastname": "Qa Patch Surname",
+        "additionalneeds": "Qa Patch Needs"
+    },
+    "invalidHeaders": {
+        "Content-Type": "application/json"
+    },
+    "invalidRequestBody": {
+        "invalid": "invalid"
+    }
+}

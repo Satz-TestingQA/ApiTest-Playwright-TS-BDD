@@ -1,0 +1,48 @@
+{
+    "apiUrl": "https://restful-booker.herokuapp.com/booking/",
+    "tokenUrl": "https://restful-booker.herokuapp.com/auth",
+    "requestBody": {
+        "firstname": "Prod Full Name",
+        "lastname": "Prod Surname",
+        "totalprice": 1000,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2025-12-01",
+            "checkout": "2025-12-05"
+        },
+        "additionalneeds": "Prod Needs"
+    },
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "tokenbody": {
+        "username": "admin",
+        "password": "password123"
+    },
+    "putHeader": {
+        "Content-Type": "application/json",
+        "Cookie": "token={0}"
+    },
+    "putRequestBody": {
+        "firstname": "Prod Put First Name",
+        "lastname": "Prod Put Surname",
+        "totalprice": 1000,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2025-12-01",
+            "checkout": "2025-12-05"
+        },
+        "additionalneeds": "Prod Update Needs"
+    },
+    "patchRequestBody": {
+        "firstname": "Prod Patch First Name",
+        "lastname": "Prod Patch Surname",
+        "additionalneeds": "Prod Patch Needs"
+    },
+    "invalidHeaders": {
+        "Content-Type": "application/json"
+    },
+    "invalidRequestBody": {
+        "invalid": "invalid"
+    }
+}

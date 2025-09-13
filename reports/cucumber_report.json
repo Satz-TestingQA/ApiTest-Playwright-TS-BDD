@@ -1,0 +1,690 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-testing-framework-using-playwright-and-cucumber;performing-crud-operations-with-post,-get,-put,-patch-&-delete-requests-using-request-chaining",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Performing CRUD operations with POST, GET, PUT, PATCH & DELETE requests using request chaining",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1673800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Creating a booking using POST api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1261633599
+            },
+            "embeddings": [
+              {
+                "data": "RW52aXJvbm1lbnQgc2V0dXAgaXMgU3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "RW52aXJvbm1lbnQgc2V0dXAgaXMgY29tcGxldGVkIGFuZCBpdCBpcyBydW5uaW5nIHdpdGggOlFB",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Q3JlYXRpbmcgYSBib29raW5nIHVzaW5nIFBPU1QgcmVxdWVzdCBpcyBzdGFydGVk",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcv",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Q3JlYXRpbmcgYSBib29raW5nIGlzIGNvbXBsZXRlZA==",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "Validating the data of created booking",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4881200
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgMjAw",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Fetching the booking booking id",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3333499
+            },
+            "embeddings": [
+              {
+                "data": "VGhlIGNyZWF0ZWQgYm9va2luZyBpZCBpcyA6MjgyOA==",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "Retrieving the data of created booking using GET api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 282364800
+            },
+            "embeddings": [
+              {
+                "data": "UmV0cmlldmluZyB0aGUgZGF0YSBvZiBjcmVhdGVkIGJvb2tpbmcgdXNpbmcgR0VUIGNhbGwgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcvIGFuZCBib29raW5nIGlkOiAyODI4",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgMjAw",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "UmV0cmlldmluZyB0aGUgZGF0YSBvZiBjcmVhdGVkIGJvb2tpbmcgaXMgY29tcGxldGVk",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Validating the retrieved booking data",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6281700
+            },
+            "embeddings": [
+              {
+                "data": "UmV0cmlldmluZyB0aGUgZGF0YSBvZiBjcmVhdGVkIGJvb2tpbmcgdXNpbmcgR0VUIGNhbGwgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "TmFtZSBvZiB0aGUgYm9va2luZyBpczogUWEgRnVsbCBOYW1lIFFhIFN1cm5hbWU=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QWRkcmVzcyBvZiB0aGUgYm9va2luZyBpczogUWEgTmVlZHM=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Q2hlY2tJbiBhbmQgQ2hlY2tvdXQgZGF0ZXMgb2YgdGhlIGJvb2tpbmcgaXM6IDIwMjUtMTEtMDEgYW5kIDIwMjUtMTEtMDU=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvZiByZXRyaWV2aW5nIHRoZSBkYXRhIG9mIGNyZWF0ZWQgYm9va2luZyBpcyBjb21wbGV0ZWQ=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "Generating access token using POST api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 285361799
+            },
+            "embeddings": [
+              {
+                "data": "R2VuZXJhdGluZyBhY2Nlc3MgdG9rZW4gaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2F1dGg=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "R2VuZXJhdGluZyBhY2Nlc3MgdG9rZW4gaXMgY29tcGxldGVkOiBbb2JqZWN0IE9iamVjdF0=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Validate and fetch the generated token",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6095099
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgMjAw",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "R2VuZXJhdGVkIFRva2VuIGlzOiA3ZDY4NzVlMjNmNThhNzM=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGluZyB0b2tlbiBnZW5lcmF0aW9uIGlzIGNvbXBsZXRlZCBhbmQgdGhlIHRva2VuIGlzIDI4Mjg=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "Updating the created booking using PUT api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 285919400
+            },
+            "embeddings": [
+              {
+                "data": "VXBkYXRpbmcgdGhlIGJvb2tpbmcgdXNpbmcgUFVUIHJlcXVlc3QgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcvIGFuZCBib29raW5nIGlkOiAyODI4",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VXBkYXRpbmcgdGhlIGJvb2tpbmcgdXNpbmcgUFVUIHJlcXVlc3QgaXMgQ29tcGxldGVkOiBbb2JqZWN0IE9iamVjdF0=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgMjAw",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Validate the updated booking data",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7545100
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGluZyB0aGUgdXBkYXRlZCBib29raW5nIHVzaW5nIFBVVCByZXF1ZXN0IGlzIHN0YXJ0ZWQ=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "TmFtZSBvZiB0aGUgdXBkYXRlZCBib29raW5nIGlzOiBRYSBQdXQgRmlyc3QgTmFtZSBRYSBQdXQgU3VybmFtZQ==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VXBkYXRlZCBhZGRpdGlvbmFsIG5lZWQgaXM6IFFhIFVwZGF0ZSBOZWVkcw==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGluZyB0aGUgdXBkYXRlZCBib29raW5nIHVzaW5nIFBVVCByZXF1ZXN0IGlzIENvbXBsZXRlZDogW29iamVjdCBPYmplY3Rd",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "Updating partially the created booking using PATCH api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 308242000
+            },
+            "embeddings": [
+              {
+                "data": "UGFydGlhbGx5IHVwZGF0aW5nIHRoZSBib29raW5nIHVzaW5nIFBBVENIIHJlcXVlc3QgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcvIGFuZCBib29raW5nIGlkOiAyODI4",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "UGFydGlhbGx5IHVwZGF0aW5nIHRoZSBib29raW5nIHVzaW5nIFBBVENIIHJlcXVlc3QgaXMgQ29tcGxldGVkOiBbb2JqZWN0IE9iamVjdF0=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "Validate the partially updated booking data",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7347099
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGluZyB0aGUgcGFydGlhbGx5IHVwZGF0ZWQgYm9va2luZyBpcyBzdGFydGVk",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgMjAw",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "TmFtZSBvZiB0aGUgcGFydGlhbGx5IHVwZGF0ZWQgYm9va2luZyBpczogUWEgUGF0Y2ggRmlyc3QgTmFtZSBRYSBQYXRjaCBTdXJuYW1l",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "UGFydGlhbGx5IHVwZGF0ZWQgYWRkaXRpb25hbCBuZWVkIGlzOiBRYSBQYXRjaCBOZWVkcw==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGluZyB0aGUgcGFydGlhbGx5IHVwZGF0ZWQgYm9va2luZyBpcyBjb21wbGV0ZWQ=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "Deleting a booking using DELETE api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 276907699
+            },
+            "embeddings": [
+              {
+                "data": "RGVsZXRpbmcgdGhlIGJvb2tpbmcgdXNpbmcgREVMRVRFIHJlcXVlc3QgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcvIGFuZCBib29raW5nIGlkOiAyODI4",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "RGVsZXRpbmcgdGhlIGJvb2tpbmcgdXNpbmcgREVMRVRFIHJlcXVlc3QgaXMgQ29tcGxldGVkOiBbb2JqZWN0IE9iamVjdF0=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Validate the status delete api call",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3656899
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGluZyBkZWxldGVkIHRoZSBib29raW5nIGlzIHN0YXJ0ZWQ=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgMjAx",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGluZyBkZWxldGVkIHRoZSBib29raW5nIGlzIENvbXBsZXRlZA==",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 446700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-framework-using-playwright-and-cucumber;negative-:-get-details-of-deleted-booking",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Negative : Get details of deleted booking",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 405000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "Retrieving the data of deleted booking using GET api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 282044099
+            },
+            "embeddings": [
+              {
+                "data": "UmV0cmlldmluZyBkZWxldGVkIHRoZSBib29raW5nIHVzaW5nIEdFVCByZXF1ZXN0IGlzIHN0YXJ0ZWQ=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcvIGFuZCBib29raW5nIGlkOiAyODI4",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "UmV0cmlldmluZyBkZWxldGVkIHRoZSBib29raW5nIHVzaW5nIEdFVCByZXF1ZXN0IGlzIENvbXBsZXRlZA==",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "Validate the status of retrieved deleted booking",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3897500
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGluZyB0aGUgcmV0cmlldmluZyBkZWxldGVkIHRoZSBib29raW5nIGlzIHN0YXJ0ZWQ=",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgNDA0IGFuZCBzdGF0dXMgaXMgTm90IEZvdW5k",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGluZyB0aGUgcmV0cmlldmluZyBkZWxldGVkIHRoZSBib29raW5nIGlzIENvbXBsZXRlZA==",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 300499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-framework-using-playwright-and-cucumber;negative-:-create-a-new-booking-with-invalid-headers",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Negative : Create a new booking with invalid headers",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 298900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "Creating a booking with invalid booking headers using POST api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 283188699
+            },
+            "embeddings": [
+              {
+                "data": "Y3JlYXRlIGEgYm9va2luZyB3aXRoIGludmFsaWQgaGVhZGVycyB1c2luZyBQT1NUIHJlcXVlc3QgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcv",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Y3JlYXRlIGEgYm9va2luZyB3aXRoIGludmFsaWQgaGVhZGVycyB1c2luZyBQT1NUIHJlcXVlc3QgaXMgY29tcGxldGVk",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "Validate the status of post api call with invalid headers",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3394400
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGluZyBjcmVhdGluZyBhIGJvb2tpbmcgd2l0aCBpbnZhbGlkIGhlYWRlcnMgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgNTAwIGFuZCBzdGF0dXMgaXMgSW50ZXJuYWwgU2VydmVyIEVycm9y",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGluZyBjcmVhdGluZyBhIGJvb2tpbmcgd2l0aCBpbnZhbGlkIGhlYWRlcnNpcyBjb21wbGV0ZWQ=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 176199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-framework-using-playwright-and-cucumber;negative-:-update-the-created-booking-without-token",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Negative : Update the created booking without token",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 340499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "Updating the created booking without token using PUT api request",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 279786100
+            },
+            "embeddings": [
+              {
+                "data": "VXBkYXRlIGEgYm9va2luZyB3aXRob3V0IGFjY2VzcyB0b2tlbiB1c2luZyBQT1NUIHJlcXVlc3QgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "QVBJIFVSTDogaHR0cHM6Ly9yZXN0ZnVsLWJvb2tlci5oZXJva3VhcHAuY29tL2Jvb2tpbmcvIGFuZCBib29raW5nIGlkOiAyODI4",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VXBkYXRlIGEgYm9va2luZyB3aXRob3V0IGFjY2VzcyB0b2tlbiB1c2luZyBQT1NUIHJlcXVlc3QgaXMgY29tcGxldGVk",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "Validate the status of post put call without token",
+            "match": {
+              "location": "src\\test\\api\\steps\\step.ts:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000600
+            },
+            "embeddings": [
+              {
+                "data": "VmFsaWRhdGluZyB1cGRhdGluZyBhIGJvb2tpbmcgd2l0aCBpbnZhbGlkIGhlYWRlcnMgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZA==",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGlvbiBvbiBzdGF0dXMgY29kZSBhbmQgc3RhdHVzIHRleHQgaXMgc3RhcnRlZC4gU3RhdHVzIGNvZGUgaXMgNDAzIGFuZCBzdGF0dXMgaXMgRm9yYmlkZGVu",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "VmFsaWRhdGluZyB1cGRhdGluZyBhIGJvb2tpbmcgd2l0aCBpbnZhbGlkIGhlYWRlcnNpcyBjb21wbGV0ZWQ=",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 286100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-testing-framework-using-playwright-and-cucumber",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API testing framework using playwright and cucumber",
+    "tags": [],
+    "uri": "src\\test\\api\\features\\booking.feature"
+  }
+]
