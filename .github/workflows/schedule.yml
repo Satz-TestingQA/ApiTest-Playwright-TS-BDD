@@ -54,26 +54,26 @@ jobs:
           path: extent-report-${{ matrix.env }}.zip
           retention-days: 30
 
-      - name: Send zipped report via email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: satzmails90@gmail.com
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "📊 Playwright Test Report - $(date +'%Y-%m-%d')"
-          to: satztesting1990@gmail.com
-          from: satzmails90@gmail.com
-          body: |
-            Hello,
-            Please find attached the zipped Playwright test report including charts, screenshots, and videos.
+      # - name: Send zipped report via email
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #     server_address: smtp.gmail.com
+      #     server_port: 587
+      #     username: satzmails90@gmail.com
+      #     password: ${{ secrets.EMAIL_PASSWORD }}
+      #     subject: "📊 Playwright Test Report - $(date +'%Y-%m-%d')"
+      #     to: satztesting1990@gmail.com
+      #     from: satzmails90@gmail.com
+      #     body: |
+      #       Hello,
+      #       Please find attached the zipped Playwright test report including charts, screenshots, and videos.
 
-            Metadata:
-            - Browser: Chromium
-            - Platform: Ubuntu 20.04
-            - Environment: Production
-            - Execution Time: $(date +'%T')
+      #       Metadata:
+      #       - Browser: Chromium
+      #       - Platform: Ubuntu 20.04
+      #       - Environment: Production
+      #       - Execution Time: $(date +'%T')
 
-            Regards,
-            Playwright Automation Bot
-          attachments: playwright-report.zip
+      #       Regards,
+      #       Playwright Automation Bot
+      #     attachments: playwright-report.zip
