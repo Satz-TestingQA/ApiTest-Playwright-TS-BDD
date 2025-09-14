@@ -34,7 +34,7 @@ Versions included in `package.json` (installed as devDependencies / dependencies
 
 > **Note:** exact versions are listed in `package.json` — keep those updated as needed. The workflow currently uses Node `14` (see `.github/workflows/*`). Adjust if your framework needs a newer Node version.
 
-## Repository structure (suggested)
+## Repository structure
 
 ```
 ├─ .github/workflows/            # CI workflow YAML(s)
@@ -176,88 +176,6 @@ The repository includes a workflow file that runs scheduled Playwright tests and
 * The workflow zips `playwright-report` to `playwright-report.zip` and uploads it as an artifact.
 * Download the artifact from the workflow run UI to view the zipped HTML files locally. Extract and open `index.html` in a browser.
 
-## Troubleshooting & common fixes
-
-**1. Empty / no data in HTML report**
-
-* Ensure your test runner actually emits JSON / results that the `reporter.ts` consumes (e.g., a `cucumber.json` or cucumber-js `--format json:` output).
-* Verify the paths: the reporter script expects reports in a specific folder (e.g., `reports/cucumber.json`). Confirm the reporter's input path.
-* Make sure `ts-node` can run `reporter.ts` in CI (`ts-node` is installed in `devDependencies`).
-
-**2. Environment variable differences (Windows vs Linux)**
-
-* `package.json` currently has an `env` script using PowerShell syntax. Use `cross-env` for cross-platform compatibility (example below in "Recommended improvements").
-
-**3. Gmail SMTP failures when sending email from CI**
-
-* Use a Gmail App Password (requires 2FA). Plain account password often fails.
-* Check that the SMTP username, port, and TLS settings are correct. The action `dawidd6/action-send-mail` uses the SMTP fields you supplied in the workflow.
-
-**4. Playwright browser not found / tests fail**
-
-* Ensure step `npx playwright install` completes successfully. In CI this should run before tests.
-
-**5. `npx playwright test --with-deps` unknown flag**
-
-* If your Playwright version or scripts don’t support `--with-deps`, change the workflow to `npx playwright test` or use your npm test script.
-
-## Recommended improvements & notes
-
-* **Use `cross-env` for cross-platform environment scripts**
-
-  * Current `package.json` has:
-
-```json
-"scripts": {
-  "env": "$env:ENV='prod'",
-  ...
-}
-```
-
-* Replace with (cross-platform):
-
-```json
-"scripts": {
-  "env": "cross-env ENV=prod",
-  "test": "cucumber-js --config cucumber-api.json",
-  "report": "ts-node reporter.ts --reportName 'Playwright BDD Report' --pageTitle 'Automation Results' --metadata.browser.name 'chromium' --metadata.browser.version 'latest' --metadata.platform.name 'ubuntu' --metadata.platform.version '20.04' --metadata.device 'GitHub Actions Runner' --customData '{\"title\": \"Run Info\", \"data\": [{\"label\": \"Environment\", \"value\": \"Production\"}, {\"label\": \"Execution Time\", \"value\": \"$(date +'%T')\"}]}'"
-}
-```
-
-* **Cache `node_modules` in CI** (use `actions/cache@v4`) to speed up runs if desired.
-* **Use `actions/checkout@v4`** and the latest recommended action versions where possible.
-* **Pin Node version** in the workflow to the version you develop/test with; if your dependencies need Node 16/18, change `node-version: '14'`.
-* **Avoid emailing large artefacts directly** from CI using SMTP — consider storing reports as artifacts (already done) and sending a short notification (email/Slack) linking to the artifact or job run instead.
-
-## Example: Add cucumber json formatter (if you need JSON for reporters)
-
-You can update your cucumber-js execution to output JSON which many reporters read:
-
-```jsonc
-// as part of a cucumber-js config (or add to CLI args)
-"format": [
-  "progress",
-  "json:reports/cucumber-report.json"
-]
-```
-
-Then ensure `reporter.ts` reads `reports/cucumber-report.json`.
-
-## Contributing
-
-Feel free to open issues or PRs. When you add new features or change the CI, update this README with new environment variables and steps.
-
-## Contact / Maintainer
-👨‍💻 Author
-Satheesh Kumar Nedumaran
-Project Lead - Automation Testing
-https://www.linkedin.com/in/satztest/
-
-## License
-
-This project uses the license defined in `package.json` (`ISC`).
-
----
 
 ✅ Summary
 
@@ -272,3 +190,15 @@ This framework enables:
       📊Automated reporting & CI/CD integration
 
 With this setup, QA and Dev teams can run, track, and share API test results with ease 🚀
+
+## 👨‍💻 Contact / Maintainer
+## Author:
+## Satheesh Kumar Nedumaran
+## Project Lead - Automation Testing
+## https://www.linkedin.com/in/satztest/
+
+## License
+
+This project uses the license defined in `package.json` (`ISC`).
+
+---
