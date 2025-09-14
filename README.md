@@ -74,8 +74,8 @@ Versions included in `package.json` (installed as devDependencies / dependencies
 1. Clone the repository:
 
 ```bash
-git clone <repo-url>
-cd ploaywright-qa-task1
+git clone https://github.com/Satz-TestingQA/ApiTest-Playwright-TS-BDD.git
+cd ApiTest-Playwright-TS-BDD
 ```
 
 2. Install dependencies:
