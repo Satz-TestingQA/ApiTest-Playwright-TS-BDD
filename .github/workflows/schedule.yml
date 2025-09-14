@@ -1,10 +1,9 @@
-name: Scheduled Playwright Tests
+name: BookStore-ApiTests-Playwright-TS-BDD
 
 on:
   schedule:
     - cron: '30 2 * * 1-5'  # MON - FRI 8:00 AM IST
   workflow_dispatch:
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,39 +13,30 @@ jobs:
     env:
       ENV: ${{ matrix.env }}
     timeout-minutes: 60
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Verify Node and NPM
         run: |
           node -v
           npm -v
           npm config list
-
       - name: Install dependencies
         run: npm install
-
       - name: Install Playwright browsers
         run: npx playwright install
-
       - name: Run Playwright tests
         run: npm run test
-
       - name: Generate HTML report with metadata
         run: npm run report
-
       - name: Zip the report folder
         run: |
           cd reports/extent-report-${{ matrix.env }}
           zip -r ../../extent-report-${{ matrix.env }}.zip .
-
       - name: Upload zipped report artifact
         uses: actions/upload-artifact@v4
         with:

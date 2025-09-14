@@ -1,6 +1,6 @@
-# Playwright + Cucumber BDD Automation
+# API Testing using Playwright + Cucumber BDD Automation
 
-> **Project:** `API Tests_Playwright_TS_BDD` — Playwright + Cucumber (BDD) automation with HTML reporting and CI pipeline
+> **Project:** `Book Store API testing` — Playwright + Cucumber (BDD) automation with HTML reporting and CI pipeline
 
 ---
 ## Introduction
@@ -9,11 +9,16 @@ This repository contains an automated test framework implemented using Playwrigh
 
 ## About this project & framework
 
-* BDD-style feature files (`.feature`) are used to describe acceptance criteria.
-* Step definitions implemented in TypeScript using `@cucumber/cucumber`.
-* UI automation powered by Playwright.
-* Reports are produced using a custom `reporter.ts` (invoked by `npm run report`), and multiple-cucumber / html reporter packages are included in `devDependencies`.
+* BDD-style feature files (`.feature`) are used to describe acceptance criteria which is human-readable feature files in Given–When–Then format.
+* Step definitions and Base class and Page class are implemented in TypeScript using `@cucumber/cucumber` which link scenarios to API test logic.
+* API automation powered by Playwright APIResponse and APIRequest contexts for REST API calls which covers positive, negative, and edge test cases.
+* Data Driven Testing is Externalized payloads and test data under `testData/` and configuration file is under `config/`
 * CI pipeline runs scheduled tests (cron Mon–Fri) and can be triggered manually via `workflow_dispatch`.
+* Reports are produced using a custom `reporter.ts` (invoked by `npm run report`), and multiple-cucumber / html reporter packages are included in `devDependencies`.
+📑 Sample Report Screenshots
+
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## Tools & technologies used
 
@@ -33,21 +38,29 @@ Versions included in `package.json` (installed as devDependencies / dependencies
 
 ```
 ├─ .github/workflows/            # CI workflow YAML(s)
+├─ env                           # dotenv 
 ├─ features/                     # .feature files
-├─ src/
-│  ├─ steps/                     # cucumber step definitions (.ts)
-│  ├─ pages/                     # page objects
-│  └─ utils/                     # utilities (logging, world, helpers)
-├─ reports/                      # report outputs (json/html)
+├─ node modules                  # TS,playwright&cucumber packages
+├─ reports                       # Reports for QA and Prod envs
+├─ src/test/api
+│  ├─ base                       # consists api request reusable functions like get,put,post,delete&patch.
+│  ├─ config                     # api requests configurations
+│  ├─ constants                  # test constants
+│  ├─ feature                    # cucumber feature files
+│  ├─ pages/                     # cucumber step definitions (.ts)
+│  ├─ steps/                     # page objects
+│  └─ support/                   # utilities (logging, world, helpers)
+│  └─ testData                   # maintain datasets for different envs
+├─ playwright.config.ts          # playwright configurations
 ├─ reporter.ts                   # custom report generator script
 ├─ cucumber-api.json             # cucumber-js config used in package.json test script
-├─ package.json
-└─ tsconfig.json
+├─ package.json                  # dependencies
+└─ tsconfig.json                 # Typescript configurations
 ```
 
 ## Prerequisites
 
-* Node.js & npm (the workflow uses `node-version: '14'`). Locally: Node 14+ is fine, but if you use newer package releases you might need Node 16/18+. Use the Node version that matches your environment.
+* Node.js & npm (the workflow uses `node-version: '20'`). Locally: Node 14+ is fine, but if you use newer package releases you might need Node 16/18+. Use the Node version that matches your environment.
 * Git
 * Chromium/Firefox/WebKit browsers for Playwright (installed by `npx playwright install`)
 * (If emailing reports) a valid SMTP username/password (e.g. Gmail app password) stored as a GitHub secret.
@@ -235,9 +248,10 @@ Then ensure `reporter.ts` reads `reports/cucumber-report.json`.
 Feel free to open issues or PRs. When you add new features or change the CI, update this README with new environment variables and steps.
 
 ## Contact / Maintainer
-
-* Maintainer: tech (author listed in package.json)
-* For CI mail credentials: add `EMAIL_PASSWORD` to GitHub repository secrets.
+👨‍💻 Author
+Satheesh Kumar Nedumaran
+Project Lead - Automation Testing
+https://www.linkedin.com/in/satztest/
 
 ## License
 
@@ -245,4 +259,16 @@ This project uses the license defined in `package.json` (`ISC`).
 
 ---
 
-*Generated README — modify any paths, file names or scripts as needed to match your project implementation.*
+✅ Summary
+
+This framework enables:
+
+      📊Cross-environment testing (QA & Prod)
+
+      📊Readable BDD scenarios with Cucumber
+
+      📊Robust API validations using Playwright
+
+      📊Automated reporting & CI/CD integration
+
+With this setup, QA and Dev teams can run, track, and share API test results with ease 🚀
