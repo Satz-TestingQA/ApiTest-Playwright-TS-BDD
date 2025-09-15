@@ -12,6 +12,10 @@ jobs:
         env: [prod, qa]
     env:
       ENV: ${{ matrix.env }}
+      QA_USERNAME: ${{ secrets.QA_USERNAME }}
+      QA_PASSWORD: ${{ secrets.QA_PASSWORD }}
+      PROD_USERNAME: ${{ secrets.PROD_USERNAME }}
+      PROD_PASSWORD: ${{ secrets.PROD_PASSWORD }}
     timeout-minutes: 60
     steps:
       - name: Checkout code
